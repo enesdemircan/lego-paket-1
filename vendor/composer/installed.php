@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3e53376b050f9a752574ef52e3f4838fa63c5936',
+    'reference' => '62685d0b73571984aac0479ab9bb9e70333aedce',
     'name' => 'laravel/lumen',
   ),
   'versions' => 
@@ -282,7 +282,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3e53376b050f9a752574ef52e3f4838fa63c5936',
+      'reference' => '62685d0b73571984aac0479ab9bb9e70333aedce',
     ),
     'laravel/lumen-framework' => 
     array (
