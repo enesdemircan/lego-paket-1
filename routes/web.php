@@ -11,6 +11,14 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+    $app->get('/{lang}/', [
+        'as' => 'home', 'uses' => 'MasterController@index'
+    ]);
+
+    $app->get('/{lang}/{component_slug}/{slug}', [
+        'as' => 'multiple', 'uses' => 'MainController@multiple'
+    ]);
+
+    $app->get('/{lang}/{component_slug}', [
+        'as' => 'single', 'uses' => 'MainController@single'
+    ]);
