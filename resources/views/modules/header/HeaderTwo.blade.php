@@ -105,7 +105,7 @@
         <div class="outer-box">
             <div class="left-column">
                 <div class="logo-box">
-                    <figure class="logo"><a href="/{{$lang}}"><img src="{{env('SERVER_ADDRESS','NULL')}}/{{empty($designs->site_ayarlari->logo_beyaz) ? $designs->site_ayarlari->logo : $designs->site_ayarlari->logo_beyaz}}" alt="{{$title}}"></a></figure>
+                    <figure class="logo"><a href="/{{$lang}}"><img src="{{env('SERVER_ADDRESS','NULL')}}/{{$designs->site_ayarlari->logo}}" alt="{{$title}}"></a></figure>
                 </div>
                 <div class="search-box-outer">
                     <div class="dropdown">
@@ -125,41 +125,6 @@
             </div>
             <div class="menu-area">
                 <nav class="main-menu clearfix">
-                    <!--Keep This Empty / Menu will come through Javascript-->
-
-                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                        <ul class="navigation clearfix">
-                            @if(isset($ladders->header))
-                                @foreach ($ladders->header as $key => $value)
-                                    @if(!empty($value->children))
-                                        <li class="dropdown">
-                                            <a href="/{{$lang}}/{{$value->slug}}"><span>{{$value->name}}</span></a>
-                                            <ul>
-                                                @foreach ($value->children as $key => $value2)
-                                                    @if(!empty($value2->children))
-                                                        <li class="dropdown">
-                                                            <a href="/{{$lang}}/@if($value2->type == 'component'){{$value2->component_slug}}/{{$value2->slug}} @else{{$value2->slug}} @endif"><span>{{$value2->name}}</span></a>
-                                                            <ul>
-                                                                @foreach ($value2->children as $key => $value3)
-                                                                    <li><a href="/{{$lang}}/@if($value3->type == 'component'){{$value3->component_slug}}/{{$value3->slug}} @else{{$value3->slug}} @endif"><span>{{$value3->name}}</span></a></li>
-                                                                @endforeach
-                                                            </ul>
-                                                            <div class="dropdown-btn"><span class="fas fa-angle-down"></span></div></li>
-                                                        </li>
-                                                    @else
-                                                        <li><a href="/{{$lang}}/@if($value2->type == 'component'){{$value2->component_slug}}/{{$value2->slug}} @else{{$value2->slug}} @endif"><span>{{$value2->name}}</span></a></li>
-                                                    @endif
-                                                @endforeach
-                                            </ul>
-                                            <div class="dropdown-btn"><span class="fas fa-angle-down"></span></div></li>
-                                        </li>
-                                    @else
-                                        <li><a href="/{{$lang}}/@if($value->type == 'component'){{$value->component_slug}}/{{$value->slug}} @else{{$value->slug}} @endif">{{$value->name}}</a></li>
-                                    @endif
-                                @endforeach
-                            @endif
-                        </ul>
-                    </div>
                 </nav>
             </div>
             <div class="menu-right-content clearfix">
