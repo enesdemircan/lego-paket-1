@@ -65,7 +65,7 @@
     text-align: center;
   }
 
-  .header-top-2 .right-column .mail-box, 
+  .header-top-2 .right-column .mail-box,
   .header-top-2 .right-column .social-links{
     float: none;
   }
@@ -92,6 +92,16 @@
 
 @media only screen and (max-width: 1200px){
 
+    .style-four .page-header-mobile-info figure.logo a img
+    {
+        height: 50px;
+        margin: auto;
+        display: table;
+    }
+    .main-header.style-four .main-header-box .main-box
+    {
+        top:7px !important;
+    }
   .main-menu,
   .sticky-header,
   .main-header.style-one .outer-container:before{
@@ -288,7 +298,6 @@
 
   .main-header.style-four .page-header-mobile-info .toggle-box .logo{
     display: block;
-    padding: 15px 0px;
   }
 
   .main-header.style-four .page-header-mobile-info-toggle{
@@ -706,7 +715,7 @@
     float: none;
   }
 
-  .main-header.style-four .header-top .social-links, 
+  .main-header.style-four .header-top .social-links,
   .main-header.style-four .header-top .search-box-outer{
     float: none;
     display: inline-block;
@@ -802,7 +811,7 @@
     text-align: center;
   }
 
-  .main-header.style-six .header-top-3 .mail-box, 
+  .main-header.style-six .header-top-3 .mail-box,
   .main-header.style-six .header-top-3 .social-links{
     float: none;
     display: inline-block;
@@ -1405,7 +1414,7 @@
     transform: scale(1) !important;
   }
 
-  .rtl .copyright, 
+  .rtl .copyright,
   .rtl .footer-nav{
     float: none !important;
   }
@@ -1793,10 +1802,18 @@
    }
 
    .main-header.style-two .outer-box .left-column{
-    position: relative;
-    width: 100%;
-    padding-bottom: 20px;
+       position: relative;
+       /* width: 100%; */
+       /* padding-bottom: 20px; */
+       float: left;
+       margin-top: 5px;
    }
+
+    .main-header.style-five .outer-box .logo-box .logo img
+    {
+        width: auto;
+        height: 50px;
+    }
 
    .main-header.style-two .outer-box .logo-box{
     float: none;
@@ -1838,10 +1855,6 @@
 
    .main-header.style-three .outer-box .logo-box{
     width: 180px;
-   }
-
-   .main-header.style-three .outer-box .logo-box .logo{
-    padding: 25px 15px;
    }
 
    .main-header.style-three .outer-box{
@@ -2214,7 +2227,7 @@
 
 
 @media only screen and (max-width: 399px){
-  
+
   .main-header .menu-right-content .social-style-one{
     display: none;
   }

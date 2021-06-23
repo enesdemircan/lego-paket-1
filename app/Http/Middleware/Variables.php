@@ -95,8 +95,9 @@
                 }
             }
 
-            $ladders           = $connections->LaddersDataAllList($lang);
-            $generalModule     = '';
+            $ladders       = $connections->LaddersDataAllList($lang);
+            $generalModule = '';
+            $styleClass    = '';
 
             if (isset($designs->moduller))
             {
@@ -104,6 +105,11 @@
                 {
                     if($modul->durum == 'Aktif' and $modul->tipi == 'Genel')
                     {
+                        if ($modul->view == 'header/HeaderSix')
+                        {
+                            $styleClass = 'style-six';
+                        }
+
                         $datas 			= $connections->DataGetAll($modul->bilesenuuid,$lang,null);
                         $generalModule .= view('modules/'.$modul->view,compact('modul','datas','designs','lang','translations','ladders'))->render();
                     }
@@ -121,6 +127,7 @@
                 'sepet_toplam'      => $sepet_toplam,
                 'generalModule'     => $generalModule,
                 'translations'      => $translations,
+                'styleClass'        => $styleClass,
             ]);
             $request->merge(compact('translations','lang','ladders','designs','connections'));
             return $next($request);

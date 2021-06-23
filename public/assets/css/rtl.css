@@ -1,11 +1,11 @@
 
 
 .rtl {
-  direction: rtl; 
+  direction: rtl;
 }
 
 .ltr {
-  direction: ltr; 
+  direction: ltr;
 }
 
 .rtl .pull-left{
@@ -38,7 +38,7 @@
   margin-left: 0px;
 }
 
-.rtl .main-menu .navigation > li > ul > li > a, 
+.rtl .main-menu .navigation > li > ul > li > a,
 .rtl .main-menu .navigation > li > .megamenu li > a{
   text-align: right;
 }
@@ -107,26 +107,26 @@
   left: -15px;
 }
 
-.rtl .main-header.style-three .outer-box .logo-box{
+.rtl.main-header.style-three .outer-box .logo-box{
   left: inherit;
   right: 0px;
 }
 
-.rtl .main-header.style-three .outer-box {
+.rtl.main-header.style-three .outer-box {
   padding: 0px 270px 0px 90px;
 }
 
-.rtl .main-header.style-three .outer-box .other-option{
+.rtl.main-header.style-three .outer-box .other-option{
   right: inherit;
   left: 0px;
 }
 
-.rtl .main-header.style-three .menu-area{
+.rtl.main-header.style-three .menu-area{
   margin-left: 0px;
   margin-right: 35px;
 }
 
-.rtl .main-header .main-menu .navigation > li > a:after{
+.rtl.main-header .main-menu .navigation > li > a:after{
   right: inherit;
   left: -20px;
 }

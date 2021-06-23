@@ -2,7 +2,7 @@
 @section('content')
     {!! $html !!}
     <!-- banner-section -->
-    <section class="banner-section">
+    <section class="banner-section {{$styleClass}}">
         <div class="banner-carousel owl-theme owl-carousel dots-style-one">
             <div class="slide-item">
                 <div class="image-layer" style="background-image:url(/assets/images/banner/banner-1.jpg)"></div>
