@@ -2,52 +2,7 @@
 @section('content')
     {!! $html !!}
     <!-- banner-section -->
-    <section class="banner-section {{$styleClass}}">
-        <div class="banner-carousel owl-theme owl-carousel dots-style-one">
-            <div class="slide-item">
-                <div class="image-layer" style="background-image:url(/assets/images/banner/banner-1.jpg)"></div>
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <div class="col-xl-6 col-lg-12 col-md-12 content-column">
-                            <div class="content-box">
-                                <h2>Blackcats <br />for all of your security needs.</h2>
-                                <p>Professional discretion security for a changing world Nothing less than the best.</p>
-                                <div class="btn-box"><a href="index.html" class="theme-btn style-one">Read More</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-item style-two">
-                <div class="image-layer" style="background-image:url(/assets/images/banner/banner-2.jpg)"></div>
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 content-column">
-                            <div class="content-box">
-                                <h2>Leader in protecting people and places.</h2>
-                                <p>How all this mistaken idea of denouncing pleasure and praising pain was born and you .</p>
-                                <div class="btn-box"><a href="service.html" class="theme-btn style-one">Our Services</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-item">
-                <div class="image-layer" style="background-image:url(/assets/images/banner/banner-3.jpg)"></div>
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <div class="col-xl-7 col-lg-12 col-md-12 content-column">
-                            <div class="content-box">
-                                <h2>The ultimate <br />choice for trustable security service.</h2>
-                                <p>To take a trivial example, which of us ever undertakes laborious physical exerciseexcept to obtain some.</p>
-                                <div class="btn-box"><a href="index.html" class="theme-btn style-one">Read More</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- banner-section end -->
     <!-- BİLGİ KUTULARI -->
     <section class="chooseus-section sec-pad bg-color-3">

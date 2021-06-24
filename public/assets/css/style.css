@@ -5237,7 +5237,7 @@ div#mCSB_1_container{
 }
 
 .banner-section.style-two .banner-carousel .slide-item{
-  padding: 155px 0px 310px 0px;
+  padding: 350px 0px 310px 0px;
 }
 
 .banner-section.style-two .content-box{
@@ -9451,12 +9451,16 @@ div#mCSB_1_container{
   display: none;
 }
 
-.banner-section.style-four .banner-carousel .content-box h2{
+.banner-section.style-four .banner-carousel .content-box h2,
+.banner-section.style-five .banner-carousel .content-box h2
+{
   color: #111;
   margin-bottom: 18px;
 }
 
-.banner-section.style-four .banner-carousel .content-box p{
+.banner-section.style-four .banner-carousel .content-box p,
+.banner-section.style-five .banner-carousel .content-box p
+{
   color: #606060;
 }
 

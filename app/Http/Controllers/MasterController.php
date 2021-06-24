@@ -25,7 +25,7 @@
 
         public function index()
         {
-            $html        = null;
+            $html      = null;
 
             if (empty($this->designs->moduller))
             {

@@ -16,7 +16,9 @@
 	background: #7dbc26;
 }
 
-.theme-btn.style-one{
+.theme-btn.style-one,
+.style-five .theme-btn
+{
 	background: #7dbc26;
 }
 
