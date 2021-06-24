@@ -15,8 +15,14 @@
                                 <p>{{$data->spot}}</p>
                             @endif
 
-                            @if(!empty($data->buton_baslik) && !empty($data->buton_link))
-                                <div class="btn-box"><a href="{{$data->buton_link}}" class="theme-btn">{{$data->buton_baslik}}</a></div>
+                            @if(empty($data->video_link))
+                                @if(!empty($data->buton_baslik) && !empty($data->buton_link))
+                                    <div class="btn-box"><a href="{{$data->buton_link}}" class="theme-btn">{{$data->buton_baslik}}</a></div>
+                                @endif
+                            @else
+                                <div class="btn-box">
+                                    <a href="{{$data->video_link}}" class="theme-btn sliderVideoButton" data-caption="">{{$data->buton_baslik}}</a>
+                                </div>
                             @endif
                         </div>
                     </div>
