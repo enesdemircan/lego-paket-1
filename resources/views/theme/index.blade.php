@@ -1328,28 +1328,6 @@
         </div>
     </section>
     <!-- SEKTÖRLER -->
-    <!-- VİDEO MODÜL  -->
-    <section class="highlights-section" style="background-image: url(/assets/images/background/dark.webp);">
-        <div class="bg-layer"></div>
-        <div class="pattern-layer" style="background-image: url(/assets/images/shape/shape-12.png);"></div>
-
-        <div class="auto-container">
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 video-column">
-                    <div class="video_block_1">
-                        <div class="video-inner" style="background-image: url(/assets/images/background/video-bg-2.jpg);">
-                            <div class="video-btn">
-                                <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="video-btn lightbox-image" data-caption=""><i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- VİDEO MODÜL  -->
     <!-- SCROLL galeri -->
     <section class="project-style-two sec-pad">
         <div class="bg-layer"></div>
@@ -1478,97 +1456,7 @@
     </section>
     <!-- SCROLL MODÜL 3 -->
     <!-- pricing-section -->
-    <section class="pricing-section centred sec-pad" style="background-image: url(/assets/images/background/pricing-bg.jpg);">
-        <div class="auto-container">
-            <div class="sec-title light">
-                <div class="top-title">
-                    <div class="shape">
-                        <div class="line line-1"></div>
-                        <div class="line line-2"></div>
-                        <div class="line line-3"></div>
-                        <div class="line line-4"></div>
-                        <div class="bg-shape" style="background-image: url(/assets/images/icons/bg-shape-2.png);"></div>
-                    </div>
-                    <p>Pricng & Plans</p>
-                </div>
 
-            </div>
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
-                    <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="pricing-table">
-                            <div class="table-header">
-                                <h3>Basic Plan</h3>
-                                <p>Installation With 1 Yr Warranty</p>
-                                <h2><span>$</span>99</h2>
-
-                            </div>
-                            <div class="table-content">
-                                <ul class="feature-list clearfix">
-                                    <li>1 MP Indoor Camera</li>
-                                    <li>Day Vision</li>
-                                    <li>One Month Backup</li>
-                                    <li>Remote Access</li>
-                                    <li class="light">Motion Detection</li>
-                                </ul>
-                            </div>
-                            <div class="table-footer">
-                                <a href="index.html" class="theme-btn style-one">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
-                    <div class="pricing-block-one active wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="pricing-table">
-                            <div class="table-header">
-                                <h3>Prime Plan</h3>
-                                <p>Installation With 1 Yr Warranty</p>
-                                <h2><span>$</span>129</h2>
-
-                            </div>
-                            <div class="table-content">
-                                <ul class="feature-list clearfix">
-                                    <li>2 In & Out Door Camera 1 MP</li>
-                                    <li>Night Vision</li>
-                                    <li>Six Month Backup</li>
-                                    <li>Remote Access</li>
-                                    <li>Motion Detection</li>
-                                </ul>
-                            </div>
-                            <div class="table-footer">
-                                <a href="index.html" class="theme-btn style-one">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
-                    <div class="pricing-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="pricing-table">
-                            <div class="table-header">
-                                <h3>Super Plan</h3>
-                                <p>Installation With 2 Yr Warranty</p>
-                                <h2><span>$</span>149</h2>
-
-                            </div>
-                            <div class="table-content">
-                                <ul class="feature-list clearfix">
-                                    <li>2 In & Out Door Camera 2 MP</li>
-                                    <li>Night Vision</li>
-                                    <li>1 Year Backup</li>
-                                    <li>Remote Access</li>
-                                    <li>Motion Detection</li>
-                                </ul>
-                            </div>
-                            <div class="table-footer">
-                                <a href="index.html" class="theme-btn style-one">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- pricing-section end -->
     <!-- testimonial-section -->
     <section class="testimonial-section centred sec-pad bg-color-1">
@@ -1644,74 +1532,7 @@
     </section>
     <!-- İÇERİK MODÜL, -->
     <!-- İÇERİK MODÜL,  HABERLER / SAYFALAR VB  -->
-    <section class="news-style-four sec-pad bg-color-5">
-        <div class="auto-container">
-            <div class="sec-title-three">
 
-                <h2>Latest from our blog posts</h2>
-                <a href="blog.html" class="link theme-btn style-one" style="color: #fff;">View All Post<i class="fas fa-angle-right"></i></a>
-            </div>
-            <div class="row clearfix">
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-four wow fadeInUp ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="/assets/images/news/news-16.jpg" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-angle-right"></i></a></div>
-
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.html">How to reduce your monthly electricity bill?</a></h4>
-                                <div class="category"><a href="blog-details.html"><i class="far fa-folder"></i>11.06.2021</a></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-four wow fadeInUp ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="/assets/images/news/news-17.jpg" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-angle-right"></i></a></div>
-
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.html">How to reduce your monthly electricity bill?</a></h4>
-                                <div class="category"><a href="blog-details.html"><i class="far fa-folder"></i>11.06.2021</a></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-four wow fadeInUp ">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><img src="/assets/images/news/news-18.jpg" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-angle-right"></i></a></div>
-
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.html">How to reduce your monthly electricity bill?</a></h4>
-                                <div class="category"><a href="blog-details.html"><i class="far fa-folder"></i>11.06.2021</a></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </section>
     <!-- İÇERİK MODÜL, -->
     <!-- html modül -->
     <section class="shop-details sec-pad">
