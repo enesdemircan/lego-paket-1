@@ -13594,6 +13594,7 @@ div#mCSB_1_container{
   position: relative;
   display: block;
   padding: 58px 40px 55px 60px;
+    background: #ffffff;
 }
 
 .history-section .owl-carousel .owl-stage-outer{
@@ -13611,7 +13612,6 @@ div#mCSB_1_container{
 .history-section .history-block .content-box .upper{
   position: relative;
   display: block;
-  padding: 0px 0px 0px 180px;
   margin-bottom: 37px;
   min-height: 60px;
 }
@@ -13635,6 +13635,7 @@ div#mCSB_1_container{
   font-size: 24px;
   line-height: 34px;
   font-weight: 600;
+    color: #7dbc26;
 }
 
 .history-section .history-block .content-box .text{

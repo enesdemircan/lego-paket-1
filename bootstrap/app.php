@@ -106,12 +106,15 @@
         \App\Http\Middleware\Variables::class,
         //\App\Http\Middleware\htmlMinfy::class,
     ]);
+
     $app->routeMiddleware([
         'Variables' => \App\Http\Middleware\Variables::class,
     ]);
     //$app->register(Illuminate\Mail\MailServiceProvider::class);
     $app->configure('mail');
 
+    class_alias('\App\Http\Controllers\HelperController','Helpers');
+    //$app->alias('Helpers', \App\Http\Controllers\HelperController::class);
     $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
         require __DIR__.'/../routes/web.php';
     });

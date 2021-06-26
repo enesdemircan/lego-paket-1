@@ -294,7 +294,7 @@
     //three-item-carousel
 	if ($('.three-item-carousel').length) {
 		$('.three-item-carousel').owlCarousel({
-			loop:true,
+			loop:false,
 			margin:30,
 			nav:true,
 			smartSpeed: 1000,
@@ -324,7 +324,7 @@
 	// Four Item Carousel
 	if ($('.four-item-carousel').length) {
 		$('.four-item-carousel').owlCarousel({
-			loop:true,
+			loop:false,
 			margin:30,
 			nav:true,
 			smartSpeed: 500,
@@ -354,7 +354,7 @@
 	// Five Item Carousel
 	if ($('.five-item-carousel').length) {
 			$('.five-item-carousel').owlCarousel({
-			loop:true,
+			loop:false,
 			margin:30,
 			nav:true,
 			smartSpeed: 3000,
@@ -473,7 +473,7 @@
 	// clients-carousel
 	if ($('.clients-carousel').length) {
 		$('.clients-carousel').owlCarousel({
-			loop:true,
+			loop:false,
 			margin:30,
 			nav:false,
 			smartSpeed: 3000,

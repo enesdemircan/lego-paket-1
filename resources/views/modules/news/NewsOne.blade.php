@@ -6,12 +6,12 @@
         </div>
         <div class="row clearfix mb-30">
             @foreach($datas as $key => $data)
-                @if($key < 3)
+                @if($key < $modul->limit)
                     <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                         <div class="news-block-four wow fadeInUp ">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="{{env('SERVER_ADDRESS','NULL')}}/{{explode(',',$data->resim)[0]}}" alt="{{$data->baslik}}" title="{{$data->baslik}}"></figure>
+                                    <figure class="image"><img src="{{Helpers::ArrayImageOne($data->resim,1)}}" alt="{{$data->baslik}}" title="{{$data->baslik}}"></figure>
                                     <div class="link"><a href="/"><i class="fas fa-angle-right"></i></a></div>
                                 </div>
                                 <div class="lower-content">

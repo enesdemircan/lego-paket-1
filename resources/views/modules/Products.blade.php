@@ -8,12 +8,12 @@
             </div>
             <div class="row clearfix">
                 @foreach($datas as $key => $data)
-                    @if($key < 7)
+                    @if($key < $modul->limit)
                         <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
                             <div class="shop-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="{{env('SERVER_ADDRESS','NULL')}}/{{explode(',',$data->resim)[0]}}" alt="{{$data->baslik}}" title="{{$data->baslik}}">
+                                        <img src="{{Helpers::ArrayImageOne($data->resim,1)}}" alt="{{$data->baslik}}" title="{{$data->baslik}}">
                                         <a href="/" class="cart-btn"><i class="icon-right-arrow"></i>{{$translations['urun_detayi']}}</a>
                                     </figure>
                                     <div class="lower-content">
