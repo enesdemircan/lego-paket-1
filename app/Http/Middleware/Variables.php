@@ -97,11 +97,12 @@
 
             $ladders       = $connections->LaddersDataAllList($lang);
             $generalModule = '';
+            $footerModule  = '';
             $styleClass    = '';
 
             if (isset($designs->moduller))
             {
-                foreach($designs->moduller as $key => $modul)
+                foreach($designs->moduller as $modul)
                 {
                     if($modul->durum == 'Aktif' and $modul->tipi == 'Genel')
                     {
@@ -112,6 +113,11 @@
 
                         $datas 			= $connections->DataGetAll($modul->bilesenuuid,$lang,null);
                         $generalModule .= view('modules/'.$modul->view,compact('modul','datas','designs','lang','translations','ladders'))->render();
+                    }
+                    else if($modul->durum == 'Aktif' and $modul->tipi == 'Footer')
+                    {
+                        $datas 			= $connections->DataGetAll($modul->bilesenuuid,$lang,null);
+                        $footerModule .= view('modules/'.$modul->view,compact('modul','datas','designs','lang','translations','ladders'))->render();
                     }
                 }
             }
@@ -128,6 +134,7 @@
                 'generalModule'     => $generalModule,
                 'translations'      => $translations,
                 'styleClass'        => $styleClass,
+                'footerModule'      => $footerModule,
             ]);
             $request->merge(compact('translations','lang','ladders','designs','connections'));
             return $next($request);

@@ -23,7 +23,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="outer-container">
+            <div class="auto-container">
                 <div class="p-tabs-content">
                     <div class="p-tab active-tab" id="tab-1">
                         <div class="five-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
