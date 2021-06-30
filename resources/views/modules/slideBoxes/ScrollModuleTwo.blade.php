@@ -14,9 +14,9 @@
                 </div>
             </div>
             <div class="three-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
-                <div class="project-block-one">
-                    @foreach($datas as $key => $data)
-                        @if($key < $modul->limit)
+                @foreach($datas as $key => $data)
+                    @if($key < $modul->limit)
+                        <div class="project-block-one">
                             <div class="inner-box">
                                 <figure class="image-box"><img src="{{Helpers::ArrayImageOne($data->resim,1)}}" alt="{{$data->baslik}}" title="{{$data->baslik}}"></figure>
                                 <div class="content-box">
@@ -37,9 +37,12 @@
                                     @endif
                                 </div>
                             </div>
-                        @endif
-                    @endforeach
-                </div>
+                        </div>
+                    @endif
+                @endforeach
+
+
+
             </div>
         </div>
     </section>

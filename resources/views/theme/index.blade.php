@@ -1195,9 +1195,5 @@
     </section>
     <!-- SEKTÖRLER -->
 
-  
-
-
-
 
 @endsection
