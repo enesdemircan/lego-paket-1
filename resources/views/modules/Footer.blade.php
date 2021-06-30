@@ -16,9 +16,9 @@
                                 <p>{{$translations['header_telefon_aciklama']}}</p>
                             </div>
                             <div class="text">
-                               @if(!empty($desing->site_ayarlari->footer_slogan))
+                               @if(!empty($designs->site_ayarlari->footer_slogan))
                                     <p>
-                                        {{$desing->site_ayarlari->footer_slogan}}
+                                        {{$designs->site_ayarlari->footer_slogan}}
                                     </p>
                                 @endif
                             </div>
@@ -28,9 +28,9 @@
                     @if(isset($ladders->footer_1))
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget">
-                                @if(!empty($desing->site_ayarlari->footer_menu_baslik_1))
+                                @if(!empty($designs->site_ayarlari->footer_menu_baslik_1))
                                     <div class="widget-title">
-                                        <h3>{{$desing->site_ayarlari->footer_menu_baslik_1}}</h3>
+                                        <h3>{{$designs->site_ayarlari->footer_menu_baslik_1}}</h3>
                                     </div>
                                 @endif
                                 <div class="widget-content clearfix">
@@ -47,9 +47,9 @@
                     @if(isset($ladders->footer_2))
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget">
-                                @if(!empty($desing->site_ayarlari->footer_menu_baslik_2))
+                                @if(!empty($designs->site_ayarlari->footer_menu_baslik_2))
                                     <div class="widget-title">
-                                        <h3>{{$desing->site_ayarlari->footer_menu_baslik_2}}</h3>
+                                        <h3>{{$designs->site_ayarlari->footer_menu_baslik_2}}</h3>
                                     </div>
                                 @endif
                                 <div class="widget-content clearfix">
