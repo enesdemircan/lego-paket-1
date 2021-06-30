@@ -1194,85 +1194,10 @@
         </div>
     </section>
     <!-- SEKTÖRLER -->
-    <!-- testimonial-section -->
-    <section class="testimonial-section centred sec-pad bg-color-1">
-        <div class="auto-container">
-            <div class="sec-title centred">
-                <div class="top-title">
-                    <div class="shape">
-                        <div class="line line-1"></div>
-                        <div class="line line-2"></div>
-                        <div class="line line-3"></div>
-                        <div class="line line-4"></div>
-                        <div class="bg-shape" style="background-image: url(/assets/images/icons/bg-shape-5.png);"></div>
-                    </div>
-                    <p>Müşteri Yorumları</p>
-                </div>
 
-            </div>
-            <div class="three-item-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
-
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="quote-icon"><i class="icon-left-quote"></i></div>
-                        <h4>Raff Leonard</h4>
-                        <span class="designation">The Craftworks, Founder</span>
-                        <p>Blackcats service team is very prompt, courteous and professional. They are committed to doing a quality job & the service</p>
-                        <figure class="thumb-box"><img src="/assets/images/resource/testimonial-1.png" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="quote-icon"><i class="icon-left-quote"></i></div>
-                        <h4>Lamont Shaun</h4>
-                        <span class="designation">The Humming Tree ,Manager</span>
-                        <p>We have been using the security system of blackcats from past 5 years, which is working fine without any issues & good service.</p>
-                        <figure class="thumb-box"><img src="/assets/images/resource/testimonial-2.png" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
-                    </div>
-                </div>
+  
 
 
 
-            </div>
-        </div>
-    </section>
-    <!-- testimonial-section end -->
-    <!-- html modül -->
-    <section class="shop-details sec-pad">
-        <div class="auto-container">
-
-
-            <div class="related-products">
-
-                <div class="row clearfix">
-                    HTML MODÜL  (Facebook page plugin, instagram embed  vb. için panelden script,html eklenen modül   )
-
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- html modül -->
-
-
-    <!-- HARİTA MODÜL ,  Aktif eidldiğinde iletişim kısmına girilen harita kodunu gösterecek şekilde ayarlanacak -->
-    <section class="google-map-section">
-        <div class="map-inner">
-            <div
-                class="google-map"
-                id="contact-google-map"
-                data-map-lat="40.712776"
-                data-map-lng="-74.005974"
-                data-icon-path="/assets/images/icons/map-marker.png"
-                data-map-title="Brooklyn, New York, United Kingdom"
-                data-map-zoom="12"
-                data-markers='{
-                        "marker-1": [40.712776, -74.005974, "<h4>Branch Office</h4><p>77/99 New York</p>","/assets/images/icons/map-marker.png"]
-                    }'>
-
-            </div>
-        </div>
-    </section>
-    <!-- HARİTA MODÜL  -->
 
 @endsection
