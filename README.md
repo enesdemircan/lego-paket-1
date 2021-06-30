@@ -1,2 +1,3 @@
-# lego-paket-1
-lego-paket-1
+# LEGO CMS
+
+Front-end paket 2 projesidir.
