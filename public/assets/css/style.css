@@ -1945,7 +1945,15 @@ div#mCSB_1_container{
   position: relative;
 }
 
-.banner-carousel .slide-item{
+.service-details .banner-carousel .slide-item
+{
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-carousel .slide-item
+{
   position: relative;
   padding: 132px 0px 138px 0px;
 }
@@ -13211,6 +13219,15 @@ div#mCSB_1_container{
 
 
 /** page-title **/
+.sec-pad.style-four
+{
+    padding: 150px 0px;
+}
+
+.page-title.style-four
+{
+    padding: 100px 0px 27px 0px;
+}
 
 .page-title{
   position: relative;
@@ -13447,7 +13464,13 @@ div#mCSB_1_container{
 
 /** video-section **/
 
-.video-section{
+.service-details-content .video-section
+{
+    margin-bottom: 150px;
+}
+
+.video-section
+{
   position: relative;
 }
 

@@ -16,9 +16,9 @@
     ]);
 
     $app->get('/{lang}/{component_slug}/{slug}', [
-        'as' => 'multiple', 'uses' => 'MainController@multiple'
+        'as' => 'multiple', 'uses' => 'MasterController@multiple'
     ]);
 
     $app->get('/{lang}/{component_slug}', [
-        'as' => 'single', 'uses' => 'MainController@single'
+        'as' => 'single', 'uses' => 'MasterController@single'
     ]);

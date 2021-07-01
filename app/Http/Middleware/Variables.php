@@ -111,6 +111,11 @@
                             $styleClass = 'style-six';
                         }
 
+                        if ($modul->view == 'header/HeaderFour')
+                        {
+                            $styleClass = 'style-four';
+                        }
+
                         $datas 			= $connections->DataGetAll($modul->bilesenuuid,$lang,null);
                         $generalModule .= view('modules/'.$modul->view,compact('modul','datas','designs','lang','translations','ladders'))->render();
                     }
