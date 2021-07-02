@@ -52,9 +52,9 @@
                                                     <!-- MÜŞTERİLER  kare, diktörgen  saçma sapan resimler yüklese bile ölçüleri FİXleyecek bir css lazım. -->
                                                     <!-- MÜŞTERİLER  kare, diktörgen  saçma sapan resimler yüklese bile ölçüleri FİXleyecek bir css lazım. -->
                                                     @if(!empty($value->resim))
-                                                        <a href="/{{$lang}}/{{$value->component_slug}}/{{$value->slug}}"><img src="{{Helpers::ArrayImageOne($value->resim,1)}}" data-src="{{Helpers::ArrayImageOne($value->resim,1)}}" class="img-responsive lazy img-fullwidth" width="300" height="300" alt="{{$value->baslik}}"></a>
+                                                        <a href="/{{$lang}}/{{$value->component_slug}}/{{$value->slug}}"><img src="{{env('SERVER_ADDRESS','NULL')}}/{{$designs->site_ayarlari->yukleniyor}}" data-src="{{Helpers::ArrayImageOne($value->resim,1)}}" class="img-responsive lazy img-fullwidth" width="300" height="300" title="{{$value->baslik}}" alt="{{$value->baslik}}"></a>
                                                     @else
-                                                        <a href="/{{$lang}}/{{$value->component_slug}}/{{$value->slug}}"><img src="/assets/images/yukleniyor-foto.jpg" data-src="/assets/images/resim-yok.png" class="img-responsive lazy img-fullwidth" width="300" height="300" alt="{{$value->baslik}}"></a>
+                                                        <a href="/{{$lang}}/{{$value->component_slug}}/{{$value->slug}}"><img src="/assets/images/yukleniyor-foto.jpg" data-src="/assets/images/resim-yok.png" class="img-responsive lazy img-fullwidth" width="300" height="300" title="{{$value->baslik}}" alt="{{$value->baslik}}"></a>
                                                     @endif
                                                     <a href="/{{$lang}}/{{$value->component_slug}}/{{$value->slug}}" class="cart-btn"><i class="fas fa-angle-right"></i>{{$translations['urun_detayi']}}</a>
                                                 </figure>

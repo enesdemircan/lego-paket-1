@@ -12,13 +12,19 @@
 */
 
     $app->get('/{lang}/', [
-        'as' => 'home', 'uses' => 'MasterController@index'
+        'as' => 'home', 'uses' => 'MasterController@Index'
+    ]);
+
+    $app->post('/{lang}/submit-form', [
+        'as' => 'single', 'uses' => 'MasterController@SubmitForm'
     ]);
 
     $app->get('/{lang}/{component_slug}/{slug}', [
-        'as' => 'multiple', 'uses' => 'MasterController@multiple'
+        'as' => 'multiple', 'uses' => 'MasterController@Multiple'
     ]);
 
     $app->get('/{lang}/{component_slug}', [
-        'as' => 'single', 'uses' => 'MasterController@single'
+        'as' => 'single', 'uses' => 'MasterController@Single'
     ]);
+
+

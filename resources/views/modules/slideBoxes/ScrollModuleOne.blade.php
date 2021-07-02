@@ -33,6 +33,8 @@
                                         @endif
                                         @if(!empty($data->buton_baslik) && !empty($data->buton_link))
                                             <div class="btn-box"><a href="{{$data->buton_link}}">{{$data->buton_baslik}} <i class="fas fa-angle-right"></i></a></div>
+                                        @else
+                                            <div class="btn-box"><a href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}">{{($translations['detay'])}} <i class="fas fa-angle-right"></i></a></div>
                                         @endif
                                     </div>
                                 </div>

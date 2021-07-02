@@ -19,14 +19,14 @@
                                             <div class="content-box">
                                                 <div class="text">
                                                     <p>{{$data->spot}}</p>
-                                                    <h4><a href="#">{{$data->baslik}}</a></h4>
+                                                    <h4><a href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}">{{$data->baslik}}</a></h4>
                                                 </div>
                                                 <ul class="link-box">
                                                     <li>
                                                         <a href="{{Helpers::ArrayImageOne($data->resim)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-zoom-in"></i></a>
                                                     </li>
                                                     <li>
-                                                        <a href="#"><i class="icon-link"></i></a>
+                                                        <a href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}"><i class="icon-link"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>

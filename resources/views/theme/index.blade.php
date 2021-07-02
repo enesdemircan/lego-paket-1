@@ -2,7 +2,7 @@
 @section('content')
     {!! $html !!}
 
-    <!-- SEKTÖRLER -->
+    <!-- SEKTÖRLER
     <section class="project-style-two sec-pad">
         <div class="bg-layer" style="background-image: url(/assets/images/background/team-bg.jpg);"></div>
         <div class="project-tab">
@@ -1193,7 +1193,7 @@
             </div>
         </div>
     </section>
-    <!-- SEKTÖRLER -->
+     SEKTÖRLER -->
 
 
 @endsection

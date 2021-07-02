@@ -111,6 +111,7 @@
         'Variables' => \App\Http\Middleware\Variables::class,
     ]);
     //$app->register(Illuminate\Mail\MailServiceProvider::class);
+    $app->register(Illuminate\Mail\MailServiceProvider::class);
     $app->configure('mail');
 
     class_alias('\App\Http\Controllers\HelperController','Helpers');

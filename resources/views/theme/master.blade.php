@@ -52,7 +52,9 @@
         <span class="fal fa-angle-up"></span>
     </button>
 </div>
-
+<div class="yukleniyor">
+    <img src="{{env('SERVER_ADDRESS','NULL')}}/{{$designs->site_ayarlari->yukleniyor}}" class="gif">
+</div>
 <script src="/assets/js/jquery.js"></script>
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
@@ -63,11 +65,15 @@
 <script src="/assets/js/appear.js"></script>
 <script src="/assets/js/scrollbar.js"></script>
 <script src="/assets/js/jquery.nice-select.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?hl={{$lang}}"></script>
+<script src="/assets/js/lazyload.min.js"></script>
+<script src="/assets/js/master.js"></script>
 <script src="/assets/js/script.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
-<script src="/assets/js/gmaps.js"></script>
-<script src="/assets/js/map-helper.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+<input type="hidden" value="{{$lang}}" class="lang">
+<input type="hidden" value="{{($translations['kapat'])}}" class="kapat">
 </body>
 
 

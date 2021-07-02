@@ -28,13 +28,15 @@
                                         @endif
 
                                     </div>
-                                    @if(!empty($data->buton_link))
                                         <ul class="link-box">
                                             <li>
-                                                <a href="{{$data->buton_link}}"><i class="icon-link"></i></a>
+                                                @if(!empty($data->buton_link))
+                                                    <a href="{{$data->buton_link}}"><i class="icon-link"></i></a>
+                                                @else
+                                                    <a href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}"><i class="icon-link"></i></a>
+                                                @endif
                                             </li>
                                         </ul>
-                                    @endif
                                 </div>
                             </div>
                         </div>

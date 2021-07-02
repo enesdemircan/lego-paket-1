@@ -15,6 +15,7 @@
                                         <div class="text">
                                             <p>
                                                 {{\Illuminate\Support\Str::words(strip_tags($data->detay), 50,'...')}}
+                                                <a class="enable-link" href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}">{{($translations['detay'])}}</a>
                                             </p>
                                         </div>
                                     @endif

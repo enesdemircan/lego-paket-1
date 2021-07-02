@@ -5,6 +5,7 @@
     use Illuminate\Http\Request;
     use Illuminate\Http\Response;
     use App\Connections;
+    use Illuminate\Support\Facades\Validator;
 
     class MasterController extends Controller
     {
@@ -23,7 +24,7 @@
             $this->connections  = $request->get('connections');
         }
 
-        public function index()
+        public function Index()
         {
             $html      = null;
 
@@ -46,8 +47,7 @@
             return view('theme.index',compact('html'));
         }
 
-
-        public function single($lang,$component_slug)
+        public function Single($lang,$component_slug)
         {
             $component      = null;
             $single         = null;
@@ -100,7 +100,7 @@
 
         }
 
-        public function multiple($lang,$component_slug,$data_slug)
+        public function Multiple($lang,$component_slug,$data_slug)
         {
 
 
@@ -186,5 +186,48 @@
                     return view('theme.sayfa_bulunamadi');
                 }
             }
+        }
+
+        public function SubmitForm(Request $request)
+        {
+            $connections = new Connections();
+
+            $attr  = array(
+                'isim'                 => $this->translations['ad_soyad'],
+                'email'                => $this->translations['email'],
+                'telefon'              => $this->translations['telefon'],
+                'mesaj' 	           => $this->translations['mesaj'],
+                //'g-recaptcha-response' => 'Captcha',
+                'link' 			       => 'Link',
+            );
+            $rules = array(
+                'isim'                 => 'string',
+                'email'                => 'required|email',
+                'telefon'              => 'required',
+                'mesaj'                => 'required',
+                'link'                 => 'required',
+                //'g-recaptcha-response' => 'required'
+            );
+            $validator = Validator::make($request->all(), $rules);
+            $validator->setAttributeNames($attr);
+
+            if ($validator->fails())
+            {
+                return response()->json(['error' => $validator->errors()->all()], 401);
+            }
+
+            $gelen_veri = $request->all();
+            $insert     = $connections->DataInsert('475f9997-c1bf-43ca-a1c9-cb3de7e103b5',$this->lang,$gelen_veri);
+
+            if ($insert->status == 1)
+            {
+                $subject    = $gelen_veri['link'].'  '.$this->translations['form_gonderildi'];
+                $alici_mail = $connections->DesignComponentList($this->lang)->mail_yonetimi->alici_mail;
+                $connections->SendMail($gelen_veri['email'],$subject,$gelen_veri,2);
+                $connections->SendMail($alici_mail,$subject,$gelen_veri,2);
+                return response()->json(['success',$this->translations['form_gonderildi'],$this->translations['kapat']]);
+            }
+
+            return $insert;
         }
     }

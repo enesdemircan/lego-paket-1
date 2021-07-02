@@ -14,9 +14,7 @@
             $this->curl = new Curl();
             $this->AppSecret = env('APP_UUID','0');
             $this->login();
-
             $lang          = config('app.locale');
-            /*
             $host          = $this->DesignComponentList($lang)->mail_yonetimi;
             $site_ayarlari = $this->DesignComponentList($lang)->site_ayarlari;
             $existing      = config('mail');
@@ -34,7 +32,7 @@
             ]);
 
             config(['mail'=>$new]);
-            */
+
         }
 
         public function login(){

@@ -21,6 +21,8 @@
                                 @endif
                                 @if(!empty($data->buton_baslik) && !empty($data->buton_link))
                                     <a href="{{$data->buton_link}}" class="theme-btn style-one">{{$data->buton_baslik}}</a>
+                                @else
+                                    <a href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}" class="theme-btn style-one">{{($translations['detay'])}}</a>
                                 @endif
                             </div>
                         </div>
