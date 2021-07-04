@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="chooseus-section sec-pad bg-color-3">
         <div class="pattern-layer" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$modul->resim}});"></div>
         <div class="auto-container">

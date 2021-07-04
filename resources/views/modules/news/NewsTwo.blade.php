@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="history-section sec-pad">
         <div class="auto-container">
             <div class="history-carousel owl-carousel owl-theme owl-dots-none">

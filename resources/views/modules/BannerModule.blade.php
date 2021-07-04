@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="sec-pad">
         <div class="auto-container">
             <div class="row clearfix">

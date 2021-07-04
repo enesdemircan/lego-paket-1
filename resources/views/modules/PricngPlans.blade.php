@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="pricing-section centred sec-pad" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$modul->resim}});">
         <div class="auto-container">
             <div class="sec-title light">

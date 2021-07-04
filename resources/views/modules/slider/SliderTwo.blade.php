@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="banner-section style-two {{$styleClass}} centred">
         <div class="bg-shape" style="background-image: url(assets/images/shape/shape-2.png);"></div>
         <div class="banner-carousel owl-theme owl-carousel owl-dots-none">

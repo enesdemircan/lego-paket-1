@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="highlights-section" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$modul->resim}});padding-bottom: 110px;">
         <div class="auto-container">
             <div class="row clearfix">

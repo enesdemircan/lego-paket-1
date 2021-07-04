@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="banner-section style-five {{$styleClass}}">
         <div class="banner-carousel owl-theme owl-carousel dots-style-one">
             @foreach($datas->data as $data)

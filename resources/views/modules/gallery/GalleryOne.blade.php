@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="project-style-two sec-pad">
         <div class="bg-layer"></div>
         <div class="project-tab">

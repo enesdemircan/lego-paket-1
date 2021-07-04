@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="project-style-three">
         <div class="auto-container">
             <div class="sec-title-two mb-5">

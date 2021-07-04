@@ -1,4 +1,4 @@
-@if(!empty($datas))
+@if(!empty($datas->data))
     <section class="cctv-section" style="background-image: url(/assets/images/background/team-bg.jpg);">
         <div class="tabs-box">
             <div class="tab-btn-box">
@@ -12,6 +12,7 @@
                 <div class="tabs-content">
                     <div class="tab active-tab" id="tab-1">
                         <div class="row clearfix">
+
                             @foreach($datas->data as $key => $data)
                                 @if($key < $modul->limit)
                                     <div class="col-lg-3 col-md-6 col-sm-12 single-column mb-5">
