@@ -1,6 +1,6 @@
 @extends('theme.master')
 
-@section('title', $translations['sss'])
+@section('title', $multiple->component->seo->title)
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="auto-container">
             <div class="content-box">
                 <div class="title">
-                    <h1>{{$translations['sss']}}</h1>
+                    <h1>{{$multiple->component->seo->title}}</h1>
                 </div>
 
             </div>
@@ -21,15 +21,15 @@
                     <div class="faq-content">
 
                         <ul class="accordion-box">
-                            @if(isset($multiple))
-                                @foreach ($multiple as $key => $value)
+                            @if(isset($multiple->data))
+                                @foreach ($multiple->data as $key => $value)
                                     <li class="accordion block @if($key == 0) active-block @endif">
                                         <div class="acc-btn @if($key == 0) active @endif ">
                                             <div class="icon-outer"><i class="icon-down-chevron"></i></div>
-                                            <h5>{{$value->baslik}}</h5>
+                                            <h5>{{$value->dynamic->baslik}}</h5>
                                         </div>
                                         <div class="acc-content @if($key == 0) current @endif ">
-                                            <p>{{\Illuminate\Support\Str::words(strip_tags($value->detay), 50,'...')}}<a class="enable-link" href="/{{$lang}}/{{$value->component_slug}}/{{$value->slug}}">{{($translations['detay'])}}</a></p>
+                                            <p>{{\Illuminate\Support\Str::words(strip_tags($value->dynamic->detay), 50,'...')}}  <a class="enable-link" href="/{{$lang}}/{{$multiple->component->slug}}/{{$value->static->slug}}">{{($translations['detay'])}}</a></p>
                                         </div>
                                     </li>
                                 @endforeach
@@ -57,7 +57,7 @@
                                 <div class="form-group">
                                 <!-- <div class="g-recaptcha" data-sitekey="{{$designs->site_ayarlari->recaptcha_sitekey}}" required></div> -->
                                 </div>
-                                <input name="link" class="form-control" type="hidden" value="{{$translations['sss']}}">
+                                <input name="link" class="form-control" type="hidden" value="{{$multiple->component->seo->title}}">
                                 <div class="form-group message-btn">
                                     <button type="submit" class="theme-btn style-one">{{$translations['gonder']}} *</button>
                                 </div>

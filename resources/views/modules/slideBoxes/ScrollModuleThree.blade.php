@@ -11,22 +11,22 @@
                 <div class="p-tabs-content">
                     <div class="p-tab active-tab" id="tab-1">
                         <div class="five-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
-                            @foreach($datas as $key => $data)
+                            @foreach($datas->data as $key => $data)
                                 @if($key < $modul->limit)
                                     <div class="project-block-one">
                                         <div class="inner-box">
-                                            <figure class="image-box"><img src="{{Helpers::ArrayImageOne($data->resim,1)}}" alt="{{$data->baslik}}" title="{{$data->baslik}}"></figure>
+                                            <figure class="image-box"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim,1)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
                                             <div class="content-box">
                                                 <div class="text">
-                                                    <p>{{$data->spot}}</p>
-                                                    <h4><a href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}">{{$data->baslik}}</a></h4>
+                                                    <p>{{$data->dynamic->spot}}</p>
+                                                    <h4><a href="/{{$lang}}/{{$datas->component->slug}}/{{$data->static->slug}}">{{$data->dynamic->baslik}}</a></h4>
                                                 </div>
                                                 <ul class="link-box">
                                                     <li>
-                                                        <a href="{{Helpers::ArrayImageOne($data->resim)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-zoom-in"></i></a>
+                                                        <a href="{{Helpers::ArrayImageOne($data->dynamic->resim)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-zoom-in"></i></a>
                                                     </li>
                                                     <li>
-                                                        <a href="/{{$lang}}/{{$data->component_slug}}/{{$data->slug}}"><i class="icon-link"></i></a>
+                                                        <a href="/{{$lang}}/{{$datas->component->slug}}/{{$data->static->slug}}"><i class="icon-link"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>

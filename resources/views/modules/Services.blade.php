@@ -12,13 +12,13 @@
                 <div class="tabs-content">
                     <div class="tab active-tab" id="tab-1">
                         <div class="row clearfix">
-                            @foreach($datas as $key => $data)
+                            @foreach($datas->data as $key => $data)
                                 @if($key < $modul->limit)
                                     <div class="col-lg-3 col-md-6 col-sm-12 single-column mb-5">
                                         <div class="single-item">
-                                            <figure class="icon-box"><img src="{{Helpers::ArrayImageOne($data->resim,1)}}" alt="{{$data->baslik}}" title="{{$data->baslik}}"></figure>
-                                            <h5>{{$data->baslik}}</h5>
-                                            <div class="link"><a href="{{$data->component_slug}}/{{$data->slug}}"><i class="icon-down-chevron"></i></a></div>
+                                            <figure class="icon-box"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim,1)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
+                                            <h5>{{$data->dynamic->baslik}}</h5>
+                                            <div class="link"><a href="{{$datas->component->slug}}/{{$data->static->slug}}"><i class="icon-down-chevron"></i></a></div>
                                         </div>
                                     </div>
                                 @endif

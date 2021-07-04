@@ -3,6 +3,7 @@
 @else
     @php $title = $designs->seo->title; @endphp
 @endif
+
 <footer class="main-footer">
     <div class="footer-top">
         <div class="auto-container">
@@ -10,9 +11,11 @@
                 <div class="row clearfix">
                     <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                         <div class="footer-widget logo-widget">
+
                             <figure class="footer-logo"><a href="/{{$lang}}"><img src="{{env('SERVER_ADDRESS','NULL')}}/{{empty($designs->site_ayarlari->logo_beyaz) ? $designs->site_ayarlari->logo : $designs->site_ayarlari->logo_beyaz}}" alt="{{$title}}"></a></figure>
                             <div class="support-box">
-                                <h4><a href="tel:{{$designs->iletisim->telefon}}">{{$designs->iletisim->telefon}}</a></h4>
+
+                                <h4><a href="tel:{{$datas->data[0]->dynamic->telefon}}">{{$datas->data[0]->dynamic->telefon}}</a></h4>
                                 <p>{{$translations['header_telefon_aciklama']}}</p>
                             </div>
                             <div class="text">
@@ -71,17 +74,17 @@
                     <li>
                         <i class="icon-location"></i>
                         <h6>{{$translations['adres']}}</h6>
-                        <p>{{$designs->iletisim->adres}}</p>
+                        <p>{{$datas->data[0]->dynamic->adres}}</p>
                     </li>
                     <li>
                         <i class="icon-email-1"></i>
                         <h6>{{$translations['email']}}</h6>
-                        <p><a href="mailto:{{$designs->iletisim->email}}">{{$designs->iletisim->email}}</a></p>
+                        <p><a href="mailto:{{$datas->data[0]->dynamic->email}}">{{$datas->data[0]->dynamic->email}}</a></p>
                     </li>
                     <li>
                         <i class="icon-clock"></i>
                         <h6>{{$translations['telefon']}}</h6>
-                        <p><a href="tel:{{$designs->iletisim->telefon}}">{{$designs->iletisim->telefon}}</a></p>
+                        <p><a href="tel:{{$datas->data[0]->dynamic->telefon}}">{{$datas->data[0]->dynamic->telefon}}</a></p>
                     </li>
                 </ul>
             </div>

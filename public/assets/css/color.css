@@ -1822,7 +1822,8 @@
 }
 
 .pagination li a:hover,
-.pagination li a.current{
+.pagination li a.current
+{
 	background: #7dbc26;
 }
 

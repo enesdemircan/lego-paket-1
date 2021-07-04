@@ -1,6 +1,6 @@
 @extends('theme.master')
 
-@section('title', $translations['iletisim'])
+@section('title', $single->component->seo->title)
 
 @section('content')
     <!-- Page Title -->
@@ -8,7 +8,7 @@
         <div class="auto-container">
             <div class="content-box">
                 <div class="title">
-                    <h1>{{$translations['iletisim']}}</h1>
+                    <h1>{{$single->component->seo->title}}</h1>
                 </div>
 
             </div>
@@ -19,7 +19,7 @@
         <div class="auto-container">
 
             <div class="sec-title centred">
-                <h2>{{$single->baslik}}</h2>
+                <h2>{{$single->data->dynamic->baslik}}</h2>
             </div>
 
             <div class="row clearfix">
@@ -46,7 +46,7 @@
                                     <!-- <div class="g-recaptcha" data-sitekey="{{$designs->site_ayarlari->recaptcha_sitekey}}" required></div> -->
                                 </div>
 
-                                <input name="link" class="form-control" type="hidden" value="{{$translations['iletisim']}}">
+                                <input name="link" class="form-control" type="hidden" value="{{$single->component->seo->title}}">
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn centred">
                                     <button class="theme-btn style-one" type="submit" name="submit-form">{{$translations['gonder']}}</button>
                                 </div>
@@ -65,24 +65,24 @@
                 <div class="single-item col">
                     <div class="icon-box"><i class="icon-location"></i></div>
                     <h4>{{$translations['adres']}}</h4>
-                    <p>{{$designs->iletisim->adres}}</p>
+                    <p>{{$single->data->dynamic->adres}}</p>
                 </div>
                 <div class="single-item col">
                     <div class="icon-box"><i class="icon-call"></i></div>
                     <h4>{{$translations['telefon']}}</h4>
-                    <p><a href="tel:{{$designs->iletisim->telefon}}">{{$designs->iletisim->telefon}}</a></p>
+                    <p><a href="tel:{{$single->data->dynamic->telefon}}">{{$single->data->dynamic->telefon}}</a></p>
                 </div>
                 <div class="single-item col">
                     <div class="icon-box"><i class="icon-email-1"></i></div>
                     <h4>{{$translations['email']}}</h4>
-                    <p><a href="mailto:{{$designs->iletisim->email}}">{{$designs->iletisim->email}}</a></p>
+                    <p><a href="mailto:{{$single->data->dynamic->email}}">{{$single->data->dynamic->email}}</a></p>
                 </div>
             </div>
         </div>
     </section>
-    @if(isset($single->harita))
+    @if(isset($single->data->dynamic->harita))
        <section class="contactMap">
-           {!! $single->harita !!}
+           {!! $single->data->dynamic->harita !!}
        </section>
     @endif
 @stop

@@ -14,6 +14,7 @@
          *
          * @return void
          */
+
         public function __construct(Request $request)
         {
             $this->middleware('Variables');
@@ -39,12 +40,33 @@
                 if($modul->durum == 'Aktif' and $modul->tipi == 'Anasayfa')
                 {
 
-                    $datas = $this->connections->DataGetAll($modul->bilesenuuid,$this->lang,null,'ASC');
+                    $datas = $this->connections->DataGetAll($modul->bilesenuuid,$this->lang,null,null,'ASC',null,1);
                     $html .= view('modules.'.$modul->view,compact('modul','datas'))->render();
                 }
             }
 
             return view('theme.index',compact('html'));
+        }
+
+        public function Paginate($lang,$component_slug,$PageNumber)
+        {
+
+            $connections    = new Connections();
+            $component_info = $connections->ComponentSlugSingle($component_slug,$lang);
+
+            $multiple = $connections->DataGetAll($component_info->uuid,$lang,null,null,'DESC',null,$this->designs->site_ayarlari->sayfa_gosterim_sayisi,$PageNumber);
+            $view     = '/theme/'.$component_info->data_type.'/list/'.$component_info->view;
+
+            if (view()->exists($view)) {
+                return view($view,compact('lang','multiple','PageNumber'));
+            }else{
+                if (env('DEVELOPER_MODE','true') == true){
+                    return 'View Katmanında Dosya Oluşturulmamış!';
+                }else{
+                    return view('theme.sayfa_bulunamadi');
+                }
+            }
+
         }
 
         public function Single($lang,$component_slug)
@@ -66,9 +88,9 @@
                         return view('theme.sayfa_bulunamadi');
                     }
                 }else{
-                    $multiple = $ladderData->datas;
+                    $multiple  = $ladderData->datas;
                     $component = $ladderData->component;
-                    $ladder = $ladderData->ladder;
+                    $ladder    = $ladderData->ladder;
 
                     $view = '/theme/categories/'.$ladderData->component->view;
                 }
@@ -76,16 +98,15 @@
             }else{
 
                 if ($component_info->data_type == 'single'){
+                    //$single = $connections->DataGetAll($component_info->uuid,$lang)[0];
 
-                    $single = $connections->DataGetAll($component_info->uuid,$lang)[0];
-                    //$single = $connections->DataGetSingle('uuid',$component_info->uuid,$lang);
-
-                    $view = '/theme/'.$component_info->data_type.'/'.$component_info->component_view;
+                    $single = $connections->DataGetSingle('slug',$component_info->slug,$lang);
+                    $view = '/theme/'.$component_info->data_type.'/'.$component_info->view;
                 }else{
-                    $multiple = $connections->DataGetAll($component_info->uuid,$lang,null,'DESC');
-                    $view = '/theme/'.$component_info->data_type.'/list/'.$component_info->component_view;
-                }
 
+                    $multiple = $connections->DataGetAll($component_info->uuid,$lang,null,null,'DESC',null,$this->designs->site_ayarlari->sayfa_gosterim_sayisi,1);
+                    $view     = '/theme/'.$component_info->data_type.'/list/'.$component_info->view;
+                }
             }
 
             if (view()->exists($view)) {
@@ -134,16 +155,10 @@
                 }
             }
 
-            if ($component_info->uuid == '69e1ffcb-79e2-407c-a0ab-cde87c701a4b')
-            {
-                $where[]      = 'data_json->kategori,=,'.$single->kategori;
-                $where[]      = 'data_json->durum,=,Aktif';
-                $where[]      = 'slug,!=,'.$single->slug;
-                $otherProduct = $connections->DataGetAll($single->component_uuid,$lang,$where,'DESC',6);
-            }
 
 
-            if ($single->component_uuid != $component_info->uuid)
+
+            if ($single->component->uuid != $component_info->uuid)
             {
                 if (env('DEVELOPER_MODE','true') == true)
                 {
@@ -155,10 +170,10 @@
                 }
             }
 
-            $view     = 'theme/multiple/detail/'.$single->component_view;
-            $multiple = $connections->DataGetAll($single->component_uuid,$lang,null,'DESC');
+            $view     = 'theme/multiple/detail/'.$single->component->view;
+            $multiple = $connections->DataGetAll($single->component->uuid,$lang,null,null,'DESC',100,null);
 
-            if (empty($single->component_view))
+            if (empty($single->component->view))
             {
                 if (env('DEVELOPER_MODE','true') == true)
                 {
@@ -172,6 +187,13 @@
 
             if (view()->exists($view))
             {
+                if ($component_info->uuid == '69e1ffcb-79e2-407c-a0ab-cde87c701a4b')
+                {
+                    $where[]      = 'kategori,=,'.$single->data->dynamic->kategori;
+                    $where[]      = 'durum,=,Aktif';
+                    $where[]      = 'slug,!=,'.$single->data->dynamic->slug;
+                    $otherProduct = $connections->DataGetAll($single->component->uuid,$lang,$where,null,'DESC',6);
+                }
 
                 return view($view,compact('lang','single','multiple','otherProduct','component_info','component_slug'));
             }

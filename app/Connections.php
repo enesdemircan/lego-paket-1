@@ -74,15 +74,27 @@
             }
         }
 
-        public function DataGetAll($componentId,$lang,$where = null,$filterOrder = null,$filterLimit = null){
+        public function DataGetAll($componentId,$lang,$dynamicWhere = null,$staticWhere = null,$filterOrder = null,$filterLimit = null,$paginate = null,$pageNumber = null)
+        {
             $url  = env('SERVER_ADDRESS','localhost').'/api/application/'.$this->AppSecret.'/list/'.$componentId.'/'.$lang.'/?token='.$this->token;
             $url .= "&filterOrder=".$filterOrder;
             $url .= "&filterLimit=".$filterLimit;
+            $url .= "&paginate=".$paginate;
 
-            if ($where != null) {
-                foreach ($where as $xwe){
-                    $url .= "&where[]=".$xwe;
+            if ($dynamicWhere != null) {
+                foreach ($dynamicWhere as $xwe){
+                    $url .= "&dynamicWhere[]=".$xwe;
                 }
+            }
+
+            if ($staticWhere != null) {
+                foreach ($staticWhere as $xwe){
+                    $url .= "&staticWhere[]=".$xwe;
+                }
+            }
+
+            if ($pageNumber != null) {
+                $url .= "&page=".$pageNumber;
             }
 
             $this->curl->get($url);
@@ -110,7 +122,7 @@
                 if (isset($this->curl->response->status)) {
                     return $this->curl->response;
                 }else{
-                    return json_decode($this->curl->response);
+                    return $this->curl->response;
                 }
 
 

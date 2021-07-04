@@ -11,13 +11,14 @@
                 <div class="p-tabs-content">
                     <div class="p-tab active-tab" id="tab-1">
                         <div class="five-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
-                            @foreach($datas as $data)
-                                @if($data->uuid == Helpers::ModuleUuidSearch('galeri-',$modul->class))
-                                    @foreach(explode(',',$data->resim) as $key => $image)
+
+                            @foreach($datas->data as $data)
+                                @if($data->static->uuid == Helpers::ModuleUuidSearch('galeri-',$modul->class))
+                                    @foreach(explode(',',$data->dynamic->resim) as $key => $image)
                                         @if($key < $modul->limit)
                                             <div class="project-block-one">
                                                 <div class="inner-box">
-                                                    <figure class="image-box"><img src="{{env('SERVER_ADDRESS','NULL').'/'.Helpers::ThumbsImage($image)}}" alt="{{$data->baslik}}" title="{{$data->baslik}}"></figure>
+                                                    <figure class="image-box"><img src="{{env('SERVER_ADDRESS','NULL').'/'.Helpers::ThumbsImage($image)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
                                                     <div class="content-box">
                                                         <ul class="link-box">
                                                             <li>

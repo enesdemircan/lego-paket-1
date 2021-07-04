@@ -9,15 +9,15 @@
     <div class="header-top-2 auto-hidden">
         <div class="outer-container">
             <ul class="info clearfix">
-                <li><i class="icon-placeholder"></i>{{$designs->iletisim->adres}}</li>
+                <li><i class="icon-placeholder"></i>{{$datas->data[0]->dynamic->adres}}</li>
             </ul>
             <div class="right-column">
-                <div class="mail-box"><i class="icon-email-2"></i><a href="mailto:{{$designs->iletisim->email}}">{{$designs->iletisim->email}}</a></div>
+                <div class="mail-box"><i class="icon-email-2"></i><a href="mailto:{{$datas->data[0]->dynamic->email}}">{{$datas->data[0]->dynamic->email}}</a></div>
                 <ul class="social-links clearfix">
-                    @if(!empty($designs->iletisim->facebook))<li><a href="{{$designs->iletisim->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li> @endif
-                    @if(!empty($designs->iletisim->twitter))<li><a href="{{$designs->iletisim->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li> @endif
-                    @if(!empty($designs->iletisim->instagram))<li><a href="{{$designs->iletisim->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a></li> @endif
-                    @if(!empty($designs->iletisim->youtube))<li><a href="{{$designs->iletisim->youtube}}" target="_blank"><i class="fab fa-youtube"></i></a></li> @endif
+                    @if(!empty($datas->data[0]->dynamic->facebook))<li><a href="{{$datas->data[0]->dynamic->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li> @endif
+                    @if(!empty($datas->data[0]->dynamic->twitter))<li><a href="{{$datas->data[0]->dynamic->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li> @endif
+                    @if(!empty($datas->data[0]->dynamic->instagram))<li><a href="{{$datas->data[0]->dynamic->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a></li> @endif
+                    @if(!empty($datas->data[0]->dynamic->youtube))<li><a href="{{$datas->data[0]->dynamic->youtube}}" target="_blank"><i class="fab fa-youtube"></i></a></li> @endif
                 </ul>
             </div>
         </div>
@@ -94,7 +94,7 @@
                 <div class="support-box">
                     <i class="icon-dial-pad"></i>
                     <p>{{$translations['header_telefon_aciklama']}}</p>
-                    <h5><a href="tel:{{$designs->iletisim->telefon}}">{{$designs->iletisim->telefon}}</a></h5>
+                    <h5><a href="tel:{{$datas->data[0]->dynamic->telefon}}">{{$datas->data[0]->dynamic->telefon}}</a></h5>
                 </div>
             </div>
         </div>
@@ -134,7 +134,7 @@
                 <div class="support-box">
                     <i class="icon-dial-pad"></i>
                     <p>{{$translations['header_telefon_aciklama']}}</p>
-                    <h5><a href="tel:{{$designs->iletisim->telefon}}">{{$designs->iletisim->telefon}}</a></h5>
+                    <h5><a href="tel:{{$datas->data[0]->dynamic->telefon}}">{{$datas->data[0]->dynamic->telefon}}</a></h5>
                 </div>
             </div>
         </div>
@@ -151,17 +151,17 @@
         <div class="contact-info">
             <h4>{{$translations['iletisim']}}</h4>
             <ul>
-                <li>{{$designs->iletisim->adres}}</li>
-                <li><a href="tel:{{$designs->iletisim->telefon}}">{{$designs->iletisim->telefon}}</a></li>
-                <li><a href="mailto:{{$designs->iletisim->email}}">{{$designs->iletisim->email}}</a></li>
+                <li>{{$datas->data[0]->dynamic->adres}}</li>
+                <li><a href="tel:{{$datas->data[0]->dynamic->telefon}}">{{$datas->data[0]->dynamic->telefon}}</a></li>
+                <li><a href="mailto:{{$datas->data[0]->dynamic->email}}">{{$datas->data[0]->dynamic->email}}</a></li>
             </ul>
         </div>
         <div class="social-links">
             <ul class="clearfix">
-                @if(!empty($designs->iletisim->facebook))<li><a href="{{$designs->iletisim->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li> @endif
-                @if(!empty($designs->iletisim->twitter))<li><a href="{{$designs->iletisim->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li> @endif
-                @if(!empty($designs->iletisim->instagram))<li><a href="{{$designs->iletisim->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a></li> @endif
-                @if(!empty($designs->iletisim->youtube))<li><a href="{{$designs->iletisim->youtube}}" target="_blank"><i class="fab fa-youtube"></i></a></li> @endif
+                @if(!empty($datas->data[0]->dynamic->facebook))<li><a href="{{$datas->data[0]->dynamic->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li> @endif
+                @if(!empty($datas->data[0]->dynamic->twitter))<li><a href="{{$datas->data[0]->dynamic->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li> @endif
+                @if(!empty($datas->data[0]->dynamic->instagram))<li><a href="{{$datas->data[0]->dynamic->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a></li> @endif
+                @if(!empty($datas->data[0]->dynamic->youtube))<li><a href="{{$datas->data[0]->dynamic->youtube}}" target="_blank"><i class="fab fa-youtube"></i></a></li> @endif
             </ul>
         </div>
     </nav>

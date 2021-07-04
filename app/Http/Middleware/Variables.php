@@ -59,13 +59,26 @@
                 }
 
                 $designs      = $connections->DesignComponentList($lang);
-                $translations = null;
 
-                if (isset($designs->ceviriler))
+                if (Cache::has('translations_'.$lang))
                 {
-                    foreach ($designs->ceviriler as $translate)
+                    $translations = Cache::get('translations_'.$lang);
+                }
+                else
+                {
+                    if (isset($designs->ceviriler))
                     {
-                        $translations[$translate->tag] = $translate->yazi;
+                        $translationsList = null;
+
+                        if (isset($designs->ceviriler))
+                        {
+                            foreach ($designs->ceviriler as $translate)
+                            {
+                                $translationsList[$translate->tag] = $translate->yazi;
+                            }
+                        }
+
+                        $translations = Cache::remember('translations_'.$lang, 60*120, function () use ($translationsList) {return $translationsList;});
                     }
                 }
             }
@@ -121,12 +134,28 @@
                             $styleClass = 'style-one';
                         }
 
-                        $datas 			= $connections->DataGetAll($modul->bilesenuuid,$lang,null);
+                        if (isset($modul->bilesenuuid))
+                        {
+                            $datas = $connections->DataGetAll($modul->bilesenuuid,$lang,null,null,'ASC',10000);
+                        }
+                        else
+                        {
+                            $datas = null;
+                        }
+
                         $generalModule .= view('modules/'.$modul->view,compact('modul','datas','designs','lang','translations','ladders'))->render();
                     }
                     else if($modul->durum == 'Aktif' and $modul->tipi == 'Footer')
                     {
-                        $datas 			= $connections->DataGetAll($modul->bilesenuuid,$lang,null);
+                        if (isset($modul->bilesenuuid))
+                        {
+                            $datas = $connections->DataGetAll($modul->bilesenuuid,$lang,null,null,'ASC',10000);
+                        }
+                        else
+                        {
+                            $datas = null;
+                        }
+
                         $footerModule .= view('modules/'.$modul->view,compact('modul','datas','designs','lang','translations','ladders'))->render();
                     }
                 }

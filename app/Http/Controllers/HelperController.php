@@ -47,7 +47,6 @@
             }
             else
             {
-                $connections           = new Connections();
                 $productCategoriesList = json_decode(json_encode($connections->LaddersDataAllList($lang)->urun_kategorileri),true);
                 $productCategories     = Cache::remember('product_categories_'.$lang, 60*120, function () use ($productCategoriesList) {return $productCategoriesList;});
 
@@ -56,19 +55,38 @@
             return $productCategories[$arraySearch];
         }
 
-        public static function get_video_thumbnail( $src ) {
-            $url_pieces = explode('/', $src);
+        public static function GetVideoThumbnail($src)
+        {
+            $urlPieces = explode('/', $src);
 
-            if ( $url_pieces[2] == 'player.vimeo.com' ) { // If Vimeo
-                $id = $url_pieces[4];
-                $hash = unserialize(file_get_contents('http://vimeo.com/api/v2/video/' . $id . '.php'));
+            if ( $urlPieces[2] == 'player.vimeo.com' )
+            {
+                $id        = $urlPieces[4];
+                $hash      = unserialize(file_get_contents('http://vimeo.com/api/v2/video/' . $id . '.php'));
                 $thumbnail = $hash[0]['thumbnail_large'];
-            } elseif ( $url_pieces[2] == 'www.youtube.com' ) { // If Youtube
-                $extract_id = explode('v=', $url_pieces[3]);
-                $id = $extract_id[1];
-                $thumbnail = 'http://img.youtube.com/vi/' . $id . '/mqdefault.jpg';
+            }
+            elseif ( $urlPieces[2] == 'www.youtube.com' )
+            { // If Youtube
+                $extractId  = explode('v=', $urlPieces[3]);
+                $id         = $extractId[1];
+                $thumbnail  = 'http://img.youtube.com/vi/' . $id . '/mqdefault.jpg';
             }
             return $thumbnail;
+        }
 
+        public static function GetApiUpdatePageUrl($ApiUrl,$ComponentSlug)
+        {
+
+
+            if (empty($ApiUrl))
+            {
+                return null;
+            }
+
+            $lang         = config('app.locale');
+            $ApiUrl       = explode('page=',$ApiUrl);
+            $translations = Cache::get('translations_'.$lang);
+
+            return 'href="/'.$lang.'/'.$ComponentSlug.'/'.$translations['sayfa'].'/'.$ApiUrl[1].'"';
         }
     }

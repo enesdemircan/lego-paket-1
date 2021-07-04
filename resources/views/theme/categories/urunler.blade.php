@@ -79,16 +79,7 @@
 
 
                         </div>
-                        <!--
-                        <div class="pagination-wrapper centred">
-                            <ul class="pagination clearfix">
-                                <li><a href="shop.html"><i class="fas fa-angle-left"></i></a></li>
-                                <li><a href="shop.html" class="current">01</a></li>
-                                <li><a href="shop.html">02</a></li>
-                                <li><a href="shop.html"><i class="fas fa-angle-right"></i></a></li>
-                            </ul>
-                        </div>
-                        -->
+
                     </div>
                 </div>
 

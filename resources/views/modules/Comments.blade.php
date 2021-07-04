@@ -16,16 +16,16 @@
         </div>
         <div class="three-item-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
 
-            @foreach($datas as $key => $data)
+            @foreach($datas->data as $key => $data)
                 @if($key < $modul->limit)
                 <div class="testimonial-block-one">
                     <div class="inner-box">
                         <div class="quote-icon"><i class="icon-left-quote"></i></div>
-                        <h4>{{$data->baslik}}</h4>
+                        <h4>{{$data->dynamic->baslik}}</h4>
 
-                        <p>{{$data->detay}}</p>
-                        @if(!empty($data->baslik))
-                        <figure class="thumb-box"><img src="{{Helpers::ArrayImageOne($data->resim)}}" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
+                        <p>{{$data->dynamic->detay}}</p>
+                        @if(!empty($data->dynamic->baslik))
+                        <figure class="thumb-box"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim)}}" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
                         @endif
                     </div>
                 </div>

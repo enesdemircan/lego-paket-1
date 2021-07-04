@@ -5,11 +5,12 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 video-column">
                     <div class="video_block_1">
                         @php $goster = null; @endphp
-                        @foreach($datas as $data)
-                            @if($data->anasayfa_goster == 'Aktif' && empty($goster))
-                                <div class="video-inner" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$data->resim}});">
+
+                        @foreach($datas->data as $data)
+                            @if($data->dynamic->anasayfa_goster == 'Aktif' && empty($goster))
+                                <div class="video-inner" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$data->dynamic->resim}});">
                                     <div class="video-btn">
-                                        <a href="{{$data->video}}" class="video-btn lightbox-image" data-caption=""><i class="fas fa-play"></i>
+                                        <a href="{{$data->dynamic->video}}" class="video-btn lightbox-image" data-caption=""><i class="fas fa-play"></i>
                                         </a>
                                     </div>
                                 </div>

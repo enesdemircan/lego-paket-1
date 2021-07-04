@@ -19,6 +19,10 @@
         'as' => 'single', 'uses' => 'MasterController@SubmitForm'
     ]);
 
+    $app->get('/{lang}/{component_slug}/{slug}/{PageNumber}', [
+        'as' => 'paginate', 'uses' => 'MasterController@Paginate'
+    ]);
+
     $app->get('/{lang}/{component_slug}/{slug}', [
         'as' => 'multiple', 'uses' => 'MasterController@Multiple'
     ]);

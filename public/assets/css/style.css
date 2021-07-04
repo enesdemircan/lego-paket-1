@@ -438,7 +438,18 @@ img {
   margin: 0px 3.5px;
 }
 
-.pagination li a{
+.pagination li a:not([href])
+{
+    cursor: no-drop;
+}
+.pagination li a:not([href]):hover
+{
+    background: #f4f4f4 !important;
+    color: #747b81 !important;
+}
+
+.pagination li a
+{
   position: relative;
   display: inline-block;
   font-size: 16px;
