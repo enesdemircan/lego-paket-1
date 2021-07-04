@@ -40,7 +40,7 @@
                 if($modul->durum == 'Aktif' and $modul->tipi == 'Anasayfa')
                 {
 
-                    $datas = $this->connections->DataGetAll($modul->bilesenuuid,$this->lang,null,null,'ASC',1000);
+                    $datas = $this->connections->DataGetAll($modul->bilesenuuid,$this->lang,null,null,'ASC',$modul->limit);
                     $html .= view('modules.'.$modul->view,compact('modul','datas'))->render();
                 }
             }
