@@ -9,7 +9,6 @@
         "laravel/lumen-framework": "5.4.*",
         "vlucas/phpdotenv": "~2.2",
         "php-curl-class/php-curl-class": "^8.9",
-        "guzzlehttp/guzzle": "^6.3",
         "intervention/image": "^2.5",
         "intervention/imagecache": "^2.3"
     },
