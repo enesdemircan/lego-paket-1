@@ -1,6 +1,6 @@
 @if(!empty($datas->data))
     <section class="chooseus-section sec-pad bg-color-3">
-        <div class="pattern-layer" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$modul->resim}});"></div>
+        <div class="pattern-layer" style="background-image: url({{ Media::getImage(env('SERVER_ADDRESS','NULL').'/'.$modul->resim, 1920, 385) }});"></div>
         <div class="auto-container">
             <div class="four-item-carousel owl-carousel owl-theme owl-dots-none">
                 @foreach($datas->data as $key => $data)

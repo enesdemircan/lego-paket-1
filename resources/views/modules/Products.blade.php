@@ -1,6 +1,6 @@
 @if(!empty($datas->data))
     <section class="team-section team-page sec-pad">
-    <div class="pattern-layer" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$modul->resim}});"></div>
+    <div class="pattern-layer" style="background-image: url({{ Media::getImage(env('SERVER_ADDRESS','NULL').'/'.$modul->resim, 1920, 600) }});"></div>
     <div class="auto-container">
         <div class="related-products">
             <div class="sec-title-three mb-3">
@@ -13,7 +13,7 @@
                             <div class="shop-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="{{Helpers::ArrayImageOne($data->dynamic->resim,1)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}">
+                                        {!! Media::createTag(Helpers::ArrayImageOne($data->dynamic->resim,1),['width' =>[270], 'height' => [270]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
                                         <a href="/{{$lang}}/{{$datas->component->slug}}/{{$data->static->slug}}" class="cart-btn"><i class="icon-right-arrow"></i>{{$translations['urun_detayi']}}</a>
                                     </figure>
                                     <div class="lower-content">

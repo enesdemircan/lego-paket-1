@@ -9,7 +9,7 @@
                     @if($key < $modul->limit)
                         <figure class="clients-logo-box">
                             <a href="#">
-                                <img src="{{Helpers::ArrayImageOne($data->dynamic->resim)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}">
+                                {!! Media::createTag(Helpers::ArrayImageOne($data->dynamic->resim),['width' =>[210], 'height' => [210]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
                             </a>
                         </figure>
                     @endif

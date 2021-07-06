@@ -11,7 +11,9 @@
                         <div class="news-block-four wow fadeInUp ">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim,1)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
+                                    <figure class="image">
+                                        {!! Media::createTag(Helpers::ArrayImageOne($data->dynamic->resim),['width' =>[370], 'height' => [370]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
+                                    </figure>
                                     <div class="link"><a href="/{{$lang}}/{{$datas->component->slug}}/{{$data->static->slug}}"><i class="fas fa-angle-right"></i></a></div>
                                 </div>
                                 <div class="lower-content">

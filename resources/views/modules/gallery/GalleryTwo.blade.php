@@ -12,7 +12,9 @@
                                 <div class="col-lg-3 col-md-6 col-sm-12 project-block">
                                     <div class="project-block-two">
                                         <div class="inner-box">
-                                            <figure class="image-box"><img src="{{env('SERVER_ADDRESS','NULL').'/'.Helpers::ThumbsImage($image)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
+                                            <figure class="image-box">
+                                                {!! Media::createTag(env('SERVER_ADDRESS','NULL').'/'.Helpers::ThumbsImage($image),['width' =>[270], 'height' => [270]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
+                                            </figure>
                                             <div class="content-box">
                                                 <div class="text">
                                                     <h5><a href="{{$datas->component->slug}}/{{$data->dynamic->slug}}">{{$data->dynamic->baslik}}</a></h5>

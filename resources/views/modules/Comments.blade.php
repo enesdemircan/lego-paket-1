@@ -25,7 +25,9 @@
 
                         <p>{{$data->dynamic->detay}}</p>
                         @if(!empty($data->dynamic->baslik))
-                        <figure class="thumb-box"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim)}}" alt="SEO HEDEF KELİME 1 + içerik başlığı"></figure>
+                        <figure class="thumb-box">
+                            {!! Media::createTag(Helpers::ArrayImageOne($data->dynamic->resim),['width' =>[90], 'height' => [90]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
+                        </figure>
                         @endif
                     </div>
                 </div>

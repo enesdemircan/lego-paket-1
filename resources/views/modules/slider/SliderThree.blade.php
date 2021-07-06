@@ -3,7 +3,7 @@
         <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
             @foreach($datas->data as $data)
                 <div class="slide-item">
-                    <div class="image-layer" style="background-image:url({{env('SERVER_ADDRESS','NULL')}}/{{$data->dynamic->resim}})"></div>
+                    <div class="image-layer" style="background-image:url({{ Media::getImage(env('SERVER_ADDRESS','NULL').'/'.$data->dynamic->resim, 1920, 500) }})"></div>
                     <div class="auto-container">
                         <div class="content-box">
                             @if(!empty($data->dynamic->baslik))

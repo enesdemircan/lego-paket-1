@@ -8,7 +8,7 @@
 
                         @foreach($datas->data as $data)
                             @if($data->dynamic->anasayfa_goster == 'Aktif' && empty($goster))
-                                <div class="video-inner" style="background-image: url({{env('SERVER_ADDRESS','NULL')}}/{{$data->dynamic->resim}});">
+                                <div class="video-inner" style="background-image: url({{ Media::getImage(env('SERVER_ADDRESS','NULL').'/'.$data->dynamic->resim, 1170, 600) }});">
                                     <div class="video-btn">
                                         <a href="{{$data->dynamic->video}}" class="video-btn lightbox-image" data-caption=""><i class="fas fa-play"></i>
                                         </a>

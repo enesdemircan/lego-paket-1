@@ -38,6 +38,7 @@
     |
     */
     $app->configure('app');
+    $app->configure('filesystems');
 
     $app->singleton(
         Illuminate\Contracts\Debug\ExceptionHandler::class,
@@ -111,10 +112,14 @@
         'Variables' => \App\Http\Middleware\Variables::class,
     ]);
     //$app->register(Illuminate\Mail\MailServiceProvider::class);
-    $app->register(Illuminate\Mail\MailServiceProvider::class);
+    $app->register(Intervention\Image\ImageServiceProvider::class);
     $app->configure('mail');
 
     class_alias('\App\Http\Controllers\HelperController','Helpers');
+    class_alias('\App\Library\ImageHelper','Media');
+    class_alias('Illuminate\Support\Facades\Storage', 'Storage');
+    class_alias('Intervention\Image\Facades\Image', 'Image');
+    $app->register(Illuminate\Filesystem\FilesystemServiceProvider::class);
     //$app->alias('Helpers', \App\Http\Controllers\HelperController::class);
     $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
         require __DIR__.'/../routes/web.php';

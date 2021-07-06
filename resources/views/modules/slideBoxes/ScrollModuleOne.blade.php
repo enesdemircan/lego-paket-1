@@ -17,7 +17,7 @@
                 @foreach($datas->data as $key => $data)
                     @if($key < $modul->limit)
                         <div class="service-block-one">
-                            <div class="inner-box" style="background-image: url({{Helpers::ArrayImageOne($data->dynamic->resim,1)}});height: 370px">
+                            <div class="inner-box" style="background-image: url({{ Media::getImage(env('SERVER_ADDRESS','NULL').'/'.$data->dynamic->resim, 370, 370) }});height: 370px">
                                 <div class="inner-box" style="height: 290px;">
                                     <div class="content-box">
                                         @if(!empty($data->dynamic->baslik))

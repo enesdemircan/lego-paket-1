@@ -17,7 +17,9 @@
                                 @if($key < $modul->limit)
                                     <div class="col-lg-3 col-md-6 col-sm-12 single-column mb-5">
                                         <div class="single-item">
-                                            <figure class="icon-box"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim,1)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
+                                            <figure class="icon-box">
+                                                {!! Media::createTag(Helpers::ArrayImageOne($data->dynamic->resim),['width' =>[200], 'height' => [200]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
+                                            </figure>
                                             <h5>{{$data->dynamic->baslik}}</h5>
                                             <div class="link"><a href="{{$datas->component->slug}}/{{$data->static->slug}}"><i class="icon-down-chevron"></i></a></div>
                                         </div>

@@ -18,7 +18,9 @@
                     @if($key < $modul->limit)
                         <div class="project-block-one">
                             <div class="inner-box">
-                                <figure class="image-box"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim,1)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
+                                <figure class="image-box">
+                                    {!! Media::createTag(Helpers::ArrayImageOne($data->dynamic->resim),['width' =>[370], 'height' => [370]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
+                                </figure>
                                 <div class="content-box">
                                     <div class="text">
                                         @if(!empty($data->dynamic->buton_link))
