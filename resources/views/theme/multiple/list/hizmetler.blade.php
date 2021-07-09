@@ -48,9 +48,9 @@
                    <ul class="pagination clearfix">
 
                        @foreach($multiple->links as $order => $links)
-                           @if($links->label == 'pagination.previous')
+                           @if($order == 0)
                                <li><a {!! Helpers::GetApiUpdatePageUrl($links->url,$multiple->component->slug) !!}><i class="fas fa-angle-left"></i></a></li>
-                           @elseif($links->label == 'pagination.next')
+                           @elseif($order == ($multiple->last_page + 1))
                                <li><a {!! Helpers::GetApiUpdatePageUrl($links->url,$multiple->component->slug) !!}><i class="fas fa-angle-right"></i></a></li>
                            @else
                                <li>

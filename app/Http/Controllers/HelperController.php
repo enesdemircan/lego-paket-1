@@ -47,6 +47,7 @@
             }
             else
             {
+                $connections           = new Connections();
                 $productCategoriesList = json_decode(json_encode($connections->LaddersDataAllList($lang)->urun_kategorileri),true);
                 $productCategories     = Cache::remember('product_categories_'.$lang, 60*120, function () use ($productCategoriesList) {return $productCategoriesList;});
 

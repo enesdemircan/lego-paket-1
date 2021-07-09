@@ -7,8 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'UpdateHelper\\' => array($vendorDir . '/kylekatarnls/update-helper/src'),
-    'OpenCloud' => array($vendorDir . '/rackspace/php-opencloud/lib'),
+    'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
-    'Guzzle\\Tests' => array($vendorDir . '/guzzle/guzzle/tests'),
-    'Guzzle' => array($vendorDir . '/guzzle/guzzle/src'),
+    'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
 );

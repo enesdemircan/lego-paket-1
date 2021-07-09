@@ -3,7 +3,7 @@
         <div class="banner-carousel owl-theme owl-carousel dots-style-one">
             @foreach($datas->data as $data)
                 <div class="slide-item">
-                    <div class="image-layer" style="background-image:url({{ Media::getImage(env('SERVER_ADDRESS','NULL').'/'.$data->dynamic->resim, 1920, 500) }})"></div>
+                    <div class="image-layer" style="background-image:url({{env('SERVER_ADDRESS','NULL')}}/{{$data->dynamic->resim}})"></div>
                     <div class="auto-container">
                         <div class="row clearfix">
                             <div class="col-xl-6 col-lg-12 col-md-12 content-column">

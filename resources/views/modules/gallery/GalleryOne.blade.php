@@ -18,9 +18,7 @@
                                         @if($key < $modul->limit)
                                             <div class="project-block-one">
                                                 <div class="inner-box">
-                                                    <figure class="image-box">
-                                                        {!! Media::createTag(env('SERVER_ADDRESS','NULL').'/'.Helpers::ThumbsImage($image),['width' =>[270], 'height' => [270]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
-                                                    </figure>
+                                                    <figure class="image-box"><img src="{{env('SERVER_ADDRESS','NULL').'/'.Helpers::ThumbsImage($image)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
                                                     <div class="content-box">
                                                         <ul class="link-box">
                                                             <li>

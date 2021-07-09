@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            @if(!empty($otherProduct))
+            @if(!empty($otherProduct->data))
                 <div class="related-products">
                     <div class="title">
                         <h3>{{$translations['ilgili_urunler']}}</h3>

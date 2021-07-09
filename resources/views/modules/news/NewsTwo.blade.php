@@ -6,9 +6,7 @@
                     @if($key < $modul->limit)
                         <div class="history-block">
                             <div class="inner-box">
-                                <figure class="image-box">
-                                    {!! Media::createTag(Helpers::ArrayImageOne($data->dynamic->resim),['width' =>[550], 'height' => [400]],['class'=> 'lazy','alt' => $data->dynamic->baslik,'title' => $data->dynamic->baslik], 'lazy') !!}
-                                </figure>
+                                <figure class="image-box"><img src="{{Helpers::ArrayImageOne($data->dynamic->resim)}}" alt="{{$data->dynamic->baslik}}" title="{{$data->dynamic->baslik}}"></figure>
                                 <div class="content-box">
                                     <div class="upper">
                                         <h3>{{$data->dynamic->baslik}}</h3>

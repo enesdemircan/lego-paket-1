@@ -23,8 +23,8 @@
                 <nav class="main-menu navbar-expand-md navbar-light">
                     <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                         <ul class="navigation clearfix">
-                            @if(isset($ladders->header))
-                                @foreach ($ladders->header as $key => $value)
+                            @if(isset($ladders->header_menu))
+                                @foreach ($ladders->header_menu as $key => $value)
                                     @if(!empty($value->children))
                                         <li class="dropdown">
                                             <a href="/{{$lang}}/{{$value->slug}}"><span>{{$value->name}}</span></a>
