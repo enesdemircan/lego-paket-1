@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '9f9d7d6ff854e9f9153f8c9dd4344d527a90bd93',
+    'reference' => '829579f36cd351335b5f7a6ef6c1b7a92b32e994',
     'name' => 'laravel/lumen',
   ),
   'versions' => 
@@ -51,6 +51,169 @@
       array (
       ),
       'reference' => '848d8125239d7dbf8ab25cb7f054f1a630e68c2e',
+    ),
+    'guzzle/batch' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/cache' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/common' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/guzzle' => 
+    array (
+      'pretty_version' => 'v3.8.1',
+      'version' => '3.8.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4de0618a01b34aa1c8c33a3f13f396dcd3882eba',
+    ),
+    'guzzle/http' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/inflection' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/iterator' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/log' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/parser' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-async' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-backoff' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-cache' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-cookie' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-curlauth' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-error-response' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-history' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-log' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-md5' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-mock' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/plugin-oauth' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/service' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
+    ),
+    'guzzle/stream' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v3.8.1',
+      ),
     ),
     'guzzlehttp/psr7' => 
     array (
@@ -318,7 +481,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9f9d7d6ff854e9f9153f8c9dd4344d527a90bd93',
+      'reference' => '829579f36cd351335b5f7a6ef6c1b7a92b32e994',
     ),
     'laravel/lumen-framework' => 
     array (
@@ -338,6 +501,15 @@
       ),
       'reference' => 'f3ad69181b8afed2c9edf7be5a2918144ff4ea32',
     ),
+    'league/flysystem-rackspace' => 
+    array (
+      'pretty_version' => '1.0.5',
+      'version' => '1.0.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ba877e837f5dce60e78a0555de37eb9bfc7dd6b9',
+    ),
     'league/mime-type-detection' => 
     array (
       'pretty_version' => '1.7.0',
@@ -346,6 +518,15 @@
       array (
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
+    ),
+    'mikemccabe/json-patch-php' => 
+    array (
+      'pretty_version' => '0.1.0',
+      'version' => '0.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b3af30a6aec7f6467c773cd49b2d974a70f7c0d4',
     ),
     'mockery/mockery' => 
     array (
@@ -570,6 +751,15 @@
         0 => '1.0.0',
         1 => '1.0',
       ),
+    ),
+    'rackspace/php-opencloud' => 
+    array (
+      'pretty_version' => 'v1.16.0',
+      'version' => '1.16.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd6b71feed7f9e7a4b52e0240a79f06473ba69c8c',
     ),
     'ralouphie/getallheaders' => 
     array (
